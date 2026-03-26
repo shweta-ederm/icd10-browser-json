@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ICD-10-CM Complete Code Browser (46,881 Codes)</title>
+        <link rel="stylesheet" href="./css/styles.css">
+</head>
+<body>
+    <div class="header">
+        <div class="header-content">
+            <div>
+                <h1>ICD-10-CM Complete Code Browser</h1>
+                <div class="header-subtitle">All 46,881 Official Diagnosis Codes in 71 Diagnosis Groups</div>
+            </div>
+            <div class="header-stats">
+                <div class="header-stat">
+                    <span class="header-stat-label">Groups:</span>
+                    <span class="header-stat-value" id="headerGroups">0</span>
+                </div>
+                <div class="header-stat">
+                    <span class="header-stat-label">Codes:</span>
+                    <span class="header-stat-value" id="headerCodes">0</span>
+                </div>
+            </div>
+            <div class="controls">
+                <div class="control-group">
+                    <label for="specialtyFilter">Specialty</label>
+                    <select id="specialtyFilter">
+                        <option value="">All Specialties</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="main-container">
+        <div class="left-panel">
+            <div class="left-panel-header">
+                <h2>Diagnosis Groups</h2>
+                <div class="group-search">
+                    <input type="text" id="groupSearch" placeholder="Search groups...">
+                </div>
+            </div>
+            <div class="groups-list" id="groupsList"></div>
+        </div>
+
+        <div class="right-panel">
+            <div class="right-panel-header" id="rightHeader">
+                <h2 id="groupTitle">Select a diagnosis group</h2>
+                <div class="right-panel-meta">
+                    <div class="meta-item">
+                        <span class="meta-badge" id="codeCount">0 codes</span>
+                    </div>
+                    <div class="meta-item">
+                        <span class="meta-badge" id="groupMeta"></span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="code-search-container" id="codeSearchContainer" style="display: none;">
+                <input type="text" id="codeSearch" placeholder="Search codes by name or code...">
+            </div>
+
+            <div class="codes-container" id="codesContainer">
+                <div class="empty-state">
+                    <p>Select a diagnosis group from the left to view codes</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+        <script src="./js/script.js"></script>
+</body>
+</html>
